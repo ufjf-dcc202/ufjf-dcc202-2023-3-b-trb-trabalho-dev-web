@@ -1,55 +1,44 @@
+* {
+    overflow: hidden;
+    font-family: sans-serif;
+    }
+
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    max-width: 1480px;
     height: 100vh;
-    margin: 0;
-    background-image: url('assets/img-index-game.jpg');
-  }
+    margin: 0 auto;
+    flex-direction: column;
+    background-image: url('assets/giphy-site.gif');
+}
 
-  .tabuleiro {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    gap: 10px;
-    margin-bottom: 40px;
+.titulo-geral {
+    color: #F5EDD5;
+    font-size: 100px;
+    padding-bottom: 200px;
+}
+
+#play {
+    color: white;
+    padding: 30px 70px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 1.4px;
+    font-weight: 600;
+    background-image: linear-gradient(45deg, #7C1315, #E13D40, #7C1315, #E13D40);
+    background-size: 400% 200%;
+    animation: textura 3.4s cubic-bezier(0.2, 0.5, 0.9, 0.6) infinite;
+    transition: background 1.6s cubic-bezier(0.55, 0.1, 0.47, 0.94) 0s;
+}
+
+@keyframes textura {
+    0% {
+        background-position: 0 0;
     }
-
-.celula {
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    border: 1px solid white;
-    border-radius: 4px;
-
+    100% {
+        background-position: 100% 0;
     }
-
-    #area-jogador-1 {
-        width: 200px;
-        height: 120px;
-        background-color: white;
-        border: 4px solid burlywood;
-        border-radius: 4px;
-        position: absolute;
-        bottom: 40px;
-        left: 40px;
-          }
-      
-    #area-jogador-2 {
-        width: 200px;
-        height: 120px;
-        background-color: white;
-        border: 4px solid burlywood;
-        border-radius: 4px;
-        position: absolute;
-        top: 40px;
-         right: 40px;
-          }
-
-#botao-1{
-  cursor: pointer;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 10px;
 }
